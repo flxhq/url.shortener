@@ -1,0 +1,21 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["dataProxy", "referentialIntegrity"]
+  engineType      = "dataproxy" 
+}
+
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+
+model urlShortener {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  urlId     String   @default(cuid()) @unique
+  url       String   @db.VarChar(255)
+}

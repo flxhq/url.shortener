@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/404", "destination": "/404.html" },
+    { "source": "/all", "destination": "/api/all" },
+    { "source": "/create", "destination": "/api/create" },
+    { "source": "/:urlId", "destination": "/api/url?id=:urlId" },
+    { "source": "/favicon.ico", "destination": "/favicon/favicon.ico" },
+    { "source": "/api/(.*)/(.*)", "destination": "/404.html" }
+  ]
+}

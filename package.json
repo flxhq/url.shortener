@@ -1,0 +1,19 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npx prisma generate"
+  },
+  "keywords": [
+    "url",
+    "URL Shortener"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^3.9.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.9.1"
+  }
+}
